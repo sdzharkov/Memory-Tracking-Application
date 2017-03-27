@@ -9,7 +9,6 @@ export const FETCH_BAR_GRAPH = ({commit}, e) => {
       var obj = response.data
       for (var i = 0; i < obj.length; i++) {
         countArray.push(obj[i].count)
-        // currentArray.push(obj[i].current_page)
       }
       commit('addBarGraphData', countArray)
     })
@@ -21,22 +20,22 @@ export const FETCH_BAR_GRAPH = ({commit}, e) => {
 }
 
 function getLine0 () {
-  return axios.get('http://127.0.0.1:3000/line_chart_0')
+  return axios.get('http://127.0.0.1:3000/get_line_chart?id=/processes/editor')
 }
 function getLine1 () {
-  return axios.get('http://127.0.0.1:3000/line_chart_1')
+  return axios.get('http://127.0.0.1:3000/get_line_chart?id=/data')
 }
 function getLine2 () {
-  return axios.get('http://127.0.0.1:3000/line_chart_2')
+  return axios.get('http://127.0.0.1:3000/get_line_chart?id=/analytics')
 }
 function getLine3 () {
-  return axios.get('http://127.0.0.1:3000/line_chart_3')
+  return axios.get('http://127.0.0.1:3000/get_line_chart?id=/processes')
 }
 function getLine4 () {
-  return axios.get('http://127.0.0.1:3000/line_chart_4')
+  return axios.get('http://127.0.0.1:3000/get_line_chart?id=/')
 }
 function getLine5 () {
-  return axios.get('http://127.0.0.1:3000/line_chart_5')
+  return axios.get('http://127.0.0.1:3000/get_line_chart?id=/player')
 }
 
 export const FETCH_LINE_GRAPH = ({commit}, e) => {

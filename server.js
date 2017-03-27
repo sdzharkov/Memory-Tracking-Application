@@ -83,112 +83,112 @@ app.get('/get_line_chart', function (req, res) { // find which pages -> crashes
   });
 })
 
-app.get('/line_chart_0', function (req, res) { // find which pages -> crashes 
-  var ar = [];
-  pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[0]])
-    .then((result) => {
-      for (var i = 0; i < result.rows.length; i++) {
-        // ar.push(result.rows[i]['bytes_used'])
-        ar.push({
-          x: result.rows[i]['timestamp'],
-          y: result.rows[i]['bytes_used']
-        })
-      }
-      console.log(ar.length)
-      res.jsonp(ar);
-    })
-    .catch((err) => {
-      console.error('error running query', err);
-  });
-})
+// app.get('/line_chart_0', function (req, res) { // find which pages -> crashes 
+//   var ar = [];
+//   pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[0]])
+//     .then((result) => {
+//       for (var i = 0; i < result.rows.length; i++) {
+//         // ar.push(result.rows[i]['bytes_used'])
+//         ar.push({
+//           x: result.rows[i]['timestamp'],
+//           y: result.rows[i]['bytes_used']
+//         })
+//       }
+//       console.log(ar.length)
+//       res.jsonp(ar);
+//     })
+//     .catch((err) => {
+//       console.error('error running query', err);
+//   });
+// })
 
-app.get('/line_chart_1', function (req, res) { // find which pages -> crashes 
-  ar = [];
-  pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[1]])
-    .then((result) => {
-      for (var i = 0; i < result.rows.length; i++) {
-        //ar.push(result.rows[i]['bytes_used']);
-        ar.push({
-          x: result.rows[i]['timestamp'],
-          y: result.rows[i]['bytes_used']
-        })
-      }
-      console.log(ar)
-      res.jsonp(ar);
-    })
-    .catch((err) => {
-      console.error('error running query', err);
-  });
-})
+// app.get('/line_chart_1', function (req, res) { // find which pages -> crashes 
+//   ar = [];
+//   pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[1]])
+//     .then((result) => {
+//       for (var i = 0; i < result.rows.length; i++) {
+//         //ar.push(result.rows[i]['bytes_used']);
+//         ar.push({
+//           x: result.rows[i]['timestamp'],
+//           y: result.rows[i]['bytes_used']
+//         })
+//       }
+//       console.log(ar)
+//       res.jsonp(ar);
+//     })
+//     .catch((err) => {
+//       console.error('error running query', err);
+//   });
+// })
 
-app.get('/line_chart_2', function (req, res) { // find which pages -> crashes 
-  var ar = [];
-  pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[2]])
-    .then((result) => {
-      for (var i = 0; i < result.rows.length; i++) {
-        ar.push({
-          x: result.rows[i]['timestamp'],
-          y: result.rows[i]['bytes_used']
-        })
-      }
-      console.log(ar.length)
-      res.jsonp(ar);
-    })
-    .catch((err) => {
-      console.error('error running query', err);
-  });
-})
+// app.get('/line_chart_2', function (req, res) { // find which pages -> crashes 
+//   var ar = [];
+//   pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[2]])
+//     .then((result) => {
+//       for (var i = 0; i < result.rows.length; i++) {
+//         ar.push({
+//           x: result.rows[i]['timestamp'],
+//           y: result.rows[i]['bytes_used']
+//         })
+//       }
+//       console.log(ar.length)
+//       res.jsonp(ar);
+//     })
+//     .catch((err) => {
+//       console.error('error running query', err);
+//   });
+// })
 
-app.get('/line_chart_3', function (req, res) { // find which pages -> crashes 
-  var ar = [];
-  pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[3]])
-    .then((result) => {
-      for (var i = 0; i < result.rows.length; i++) {
-        ar.push({
-          x: result.rows[i]['timestamp'],
-          y: result.rows[i]['bytes_used']
-        })
-      }
-      res.jsonp(ar);
-    })
-    .catch((err) => {
-      console.error('error running query', err);
-  });
-})
+// app.get('/line_chart_3', function (req, res) { // find which pages -> crashes 
+//   var ar = [];
+//   pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[3]])
+//     .then((result) => {
+//       for (var i = 0; i < result.rows.length; i++) {
+//         ar.push({
+//           x: result.rows[i]['timestamp'],
+//           y: result.rows[i]['bytes_used']
+//         })
+//       }
+//       res.jsonp(ar);
+//     })
+//     .catch((err) => {
+//       console.error('error running query', err);
+//   });
+// })
 
-app.get('/line_chart_4', function (req, res) { // find which pages -> crashes 
-  var ar = [];
-  pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[4]])
-    .then((result) => {
-      for (var i = 0; i < result.rows.length; i++) {
-        ar.push({
-          x: result.rows[i]['timestamp'],
-          y: result.rows[i]['bytes_used']
-        })
-      }
-      res.jsonp(ar);
-    })
-    .catch((err) => {
-      console.error('error running query', err);
-  });
-})
+// app.get('/line_chart_4', function (req, res) { // find which pages -> crashes 
+//   var ar = [];
+//   pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[4]])
+//     .then((result) => {
+//       for (var i = 0; i < result.rows.length; i++) {
+//         ar.push({
+//           x: result.rows[i]['timestamp'],
+//           y: result.rows[i]['bytes_used']
+//         })
+//       }
+//       res.jsonp(ar);
+//     })
+//     .catch((err) => {
+//       console.error('error running query', err);
+//   });
+// })
 
-app.get('/line_chart_5', function (req, res) { // find which pages -> crashes 
-  var ar = [];
-  pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[5]])
-    .then((result) => {
-      for (var i = 0; i < result.rows.length; i++) {
-        ar.push({
-          x: result.rows[i]['timestamp'],
-          y: result.rows[i]['bytes_used']
-        })
-      }
-      res.jsonp(ar);
-    })
-    .catch((err) => {
-      console.error('error running query', err);
-  });
-})
+// app.get('/line_chart_5', function (req, res) { // find which pages -> crashes 
+//   var ar = [];
+//   pool.query('SELECT timestamp, bytes_used FROM reports WHERE current_page = $1::varchar ORDER BY timestamp ASC',[categories[5]])
+//     .then((result) => {
+//       for (var i = 0; i < result.rows.length; i++) {
+//         ar.push({
+//           x: result.rows[i]['timestamp'],
+//           y: result.rows[i]['bytes_used']
+//         })
+//       }
+//       res.jsonp(ar);
+//     })
+//     .catch((err) => {
+//       console.error('error running query', err);
+//   });
+// })
 /* -------------------------------------------------------------------------------------*/ 
 
 
