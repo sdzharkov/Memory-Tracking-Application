@@ -1,0 +1,22 @@
+{
+  "name": "zharkov-memtracking",
+  "version": "1.0.0",
+  "description": "CONTEXT =======",
+  "main": "server.js",
+  "dependencies": {
+    "chartkick": "^2.2.3",
+    "express": "^4.15.2",
+    "vue-chartkick": "^0.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://interviews-gitlab.tulip.co/zharkov/zharkov-memtracking.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
