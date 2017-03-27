@@ -2,7 +2,7 @@
 
 An application built for a coding challenge that keeps track of page crashes for a given website. The initial graph is a count for the number of crashes while the second graph displays memory usage of a web page over a given span of time. 
 
-<img src="https://github.com/sdzharkov/Memory-Tracking-Application/img.PNG" width="400px" height="400px">
+<img src="https://github.com/sdzharkov/Memory-Tracking-Application/blob/master/img.png">
 
 The data was built with the following structure:
 
